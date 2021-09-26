@@ -54,19 +54,20 @@ chatbox.toggleIcon(false, chatButton);
 
 /*chatbot logic*/
 var form = document.getElementById("form");
+form.addEventListener("submit", handleForm);
 var history_element = document.getElementsByClassName("chatbox__messages")[0];
 var user_input = document.getElementById("user_input");
-form.addEventListener("submit", handleForm);
 
 function handleForm(event) {
   event.preventDefault();
-  let new_msg = document.createElement("div");
 
+  let new_msg = document.createElement("div");
   let user_msg_element = document.createElement("div");
   user_msg_element.className = "chatbox1";
   user_msg_element.append(user_input.value);
   user_msg_element.appendChild(document.createElement("br"));
   new_msg.appendChild(user_msg_element);
+  history_element.insertBefore(new_msg, history_element.firstChild);
 
   const data = new URLSearchParams();
   for (const pair of new FormData(form)) {
@@ -89,9 +90,8 @@ function handleForm(event) {
       bot_msg_element.className = "chatbox2";
       bot_msg_element.append(data["answer"]);
       bot_msg_element.appendChild(document.createElement("br"));
-      new_msg.appendChild(bot_msg_element);
 
-      history_element.insertBefore(new_msg, history_element.firstChild);
+      history_element.insertBefore(bot_msg_element, history_element.firstChild);
       user_input.value = "";
     })
     .catch(function (err) {
@@ -101,9 +101,8 @@ function handleForm(event) {
         ` Bot is coming online! Please wait for a minute before trying again.`
       );
       bot_msg_element.appendChild(document.createElement("br"));
-      new_msg.appendChild(bot_msg_element);
 
-      history_element.insertBefore(new_msg, history_element.firstChild);
+      history_element.insertBefore(bot_msg_element, history_element.firstChild);
       user_input.value = "";
     });
 }
