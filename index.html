@@ -161,31 +161,6 @@
         </div>
         <div class="chatbox__messages">
           <div class="chatbox2">Hey! Ask me anything</div>
-          <div>
-            <script>
-              for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr.length; j++) {
-                  if (j % 2 === 0) {
-                    let div = document.createElement("div");
-                    div.className = "chatbox1";
-                    div.innerHTML = arr[i][j] + <br />;
-                    document
-                      .getElementsByClassName("chatbox__messages")[0]
-                      .appendChild(div);
-                  }
-                  //  document.getElementsByClassName("chatbox1")[0].innerHTML= arr[i][j];
-                  else {
-                    let div = document.createElement("div");
-                    div.className = "chatbox2";
-                    div.innerHTML = arr[i][j] + <br />;
-                    document
-                      .getElementsByClassName("chatbox__messages")[0]
-                      .appendChild(div);
-                  }
-                }
-              }
-            </script>
-          </div>
         </div>
 
         <div class="inputarea chatbox__footer">
