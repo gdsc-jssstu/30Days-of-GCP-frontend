@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/chat.css" />
 
-    <link rel="stylesheet" href="static/js/Chat.js" />
-    <link rel="stylesheet" href="static/js/app.js" />
+    <!-- <link rel="stylesheet" href="static/js/Chat.js" />
+    <link rel="stylesheet" href="static/js/app.js" /> -->
 
     <link
       rel="stylesheet"
@@ -199,13 +199,13 @@
             ></i
           ></a>
         </div>
-        <div class="col">
+        <!-- <div class="col">
           <h4>Contact:</h4>
           <a
             href="https://api.whatsapp.com/send/?phone=%2B916362942135&text&app_absent=0"
             ><i class="fa fa-whatsapp" style="font-size: 36px; color: black"></i
           ></a>
-        </div>
+        </div> -->
       </div>
       <hr class="footer__hr" />
 
@@ -408,7 +408,7 @@
           }).catch(function(err) {
             let bot_msg_element = document.createElement("div");
             bot_msg_element.className = "chatbox2";
-            bot_msg_element.append(` Error: There appears to be a server or network error. Please check your internet connection and wait for a minute before trying again.`);
+            bot_msg_element.append(` Bot is coming online! Please wait for a minute before trying again.`);
             bot_msg_element.appendChild(document.createElement("br"));
             new_msg.appendChild(bot_msg_element);
 
