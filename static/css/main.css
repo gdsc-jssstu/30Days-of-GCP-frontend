@@ -6,24 +6,35 @@
   min-height: 100%;
   position: relative;
 }
-body,h1,h2,h3,h4,p {
-  font-family: sans-serif,"Roboto","Google Sans",poppins, open sans,  !important;
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: sans-serif, "Roboto", "Google Sans", poppins, open sans !important;
 }
 
 /*navbar*/
 .header {
   border-bottom: 1px solid #e2e8f0;
 }
-.logo{
-  height: 170px;
-  width: 350px;
+.logo {
+  height: 15rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    height: 10rem;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  height: 80px;
+  height: 100px;
 }
 .hamburger {
   display: none;
@@ -120,7 +131,7 @@ p {
   font-weight: 300;
 }
 /*goodies*/
-.goodies-row{
+.goodies-row {
   margin: 0 -5px;
 }
 .goodies-row:after {
@@ -182,12 +193,12 @@ ul {
   text-align: center;
   background-color: #e8e9eb;
   overflow: hidden;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 .card:hover {
   background-color: #c8cdd6;
   transition: 0.9s;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
   transform: scale(1.005);
 }
 .btn_3 {
@@ -201,7 +212,6 @@ ul {
   padding: 10px;
   margin: 2px;
   transition: 0.5s;
-  
 }
 
 .btn_3:after {
@@ -215,7 +225,6 @@ ul {
   background-color: #101010;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  
 }
 a:link {
   text-decoration: none;
@@ -234,7 +243,7 @@ a:link {
   border-width: thin;
   border-color: #dadce0;
 }
-input[type="submit"]{
+input[type="submit"] {
   margin-left: -80px;
   height: 30px;
   width: 60px;
@@ -315,6 +324,12 @@ input[type="text"] {
   margin-left: 5%;
   margin-right: 2%;
   background-color: #eee;
+  border-radius: 20px;
+}
+
+#snd_btn {
+  background-color: #4285f4;
+  border-radius: 20px;
 }
 /*footer*/
 .footer {
@@ -346,15 +361,3 @@ hr {
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
