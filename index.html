@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>GCP</title>
+      <title>30 Days of Google Cloud | GDSC JSSSTU</title>
       <link rel="stylesheet" href="static/css/main.css" />
       <link rel="stylesheet" href="static/css/typing.css" />
       <link rel="stylesheet" href="static/css/style.css" />
@@ -13,7 +13,8 @@
          rel="stylesheet" />
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+      <meta name="description" content="30 Days of Google Cloud | GDSC JSSSTU">
+      <link rel="icon" href="favicon.ico" type="image/x-icon" />
    </head>
    <body>
       <div class="container">
@@ -198,44 +199,47 @@
          </div>
       </div>
       <!-- javascript -->
-      <script src="static/js/Chat.js" />
+     
          <script>
-           /* navbar */
-           const hamburger = document.querySelector(".hamburger");
-           const navMenu = document.querySelector(".nav-menu");
-         
-           hamburger.addEventListener("click", mobileMenu);
-         
-           function mobileMenu() {
-             hamburger.classList.toggle("active");
-             navMenu.classList.toggle("active");
-           }
-         
-           const navLink = document.querySelectorAll(".nav-link");
-           navLink.forEach((n) => n.addEventListener("click", closeMenu));
-         
-           function closeMenu() {
-             hamburger.classList.remove("active");
-             navMenu.classList.remove("active");
-           }
-           function navSlider() {
-             if (this.scrollY > this.innerHeight / 2) {
+            /* navbar */
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", mobileMenu);
+
+            function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+            }
+
+            const navLink = document.querySelectorAll(".nav-link");
+            navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+            function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            }
+            function navSlider() {
+            console.log(this.scrollY);
+            if(this.scrollY > this.innerHeight / 2){
                hamburger.classList.remove("active");
                navMenu.classList.remove("active");
-             }
-           }
-           window.addEventListener("scroll", navSlider);
-         
-           /* helps Refresh Page and Keep Scroll Position */
-           document.addEventListener("DOMContentLoaded", function (event) {
-             var scrollpos = localStorage.getItem("scrollpos");
-             if (scrollpos) window.scrollTo(0, scrollpos);
-           });
-         
-           window.onbeforeunload = function (e) {
-             localStorage.setItem("scrollpos", window.scrollY);
-           };
+            }
+            }
+            window.addEventListener("scroll", navSlider);
+
+            /* helps Refresh Page and Keep Scroll Position */
+            document.addEventListener("DOMContentLoaded", function (event) {
+            var scrollpos = localStorage.getItem("scrollpos");
+            if (scrollpos) window.scrollTo(0, scrollpos);
+            });
+
+            window.onbeforeunload = function (e) {
+            localStorage.setItem("scrollpos", window.scrollY);
+            };
+
       </script>
+       <script src="static/js/Chat.js" ></script>
    </body>
 </html>
 
