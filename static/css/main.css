@@ -20,12 +20,12 @@ p {
   border-bottom: 1px solid #e2e8f0;
 }
 .logo {
-  height: 15rem;
+  height: 13rem;
 }
 
 @media only screen and (max-width: 600px) {
   .logo {
-    height: 10rem;
+    height: 8rem;
   }
 }
 
