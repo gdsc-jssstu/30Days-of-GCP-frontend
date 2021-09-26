@@ -12,10 +12,11 @@
   display: flex;
   flex-direction: column;
   background: #eee;
-  width: 300px;
-  height: 500px;
+  width: 400px;
+  height: 600px;
   z-index: -123456;
-  opacity: 0;
+  /* opacity: 0; */
+  display: none;
   transition: all 0.5s ease-in-out;
 }
 
@@ -23,7 +24,8 @@
 .chatbox--active {
   transform: translateY(-40px);
   z-index: 123456;
-  opacity: 1;
+  display: block;
+  /* opacity: 1; */
 }
 
 /* BUTTON */
@@ -45,10 +47,34 @@
   flex-direction: column;
   overflow-y: scroll;
   flex-direction: column-reverse;
+  height: 450px;
+}
+
+@media only screen and (max-width: 600px) {
+  .chatbox__messages {
+    height: 350px;
+  }
+
+  .chatbox__support {
+    width: 300px;
+    height: 500px;
+  }
 }
 
 /* FOOTER */
 .chatbox__footer {
   position: inherit;
   bottom: 0;
+}
+
+#user_input {
+  padding-right: 75px;
+}
+
+#user_input:focus {
+  outline: none;
+}
+
+#snd_btn {
+  z-index: 2;
 }
