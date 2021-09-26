@@ -69,6 +69,15 @@ function handleForm(event) {
   new_msg.appendChild(user_msg_element);
   history_element.insertBefore(new_msg, history_element.firstChild);
 
+  let typing_msg = document.createElement("div");
+  typing_msg.className = "messages__item messages__item--typing";
+  let msg_dot = document.createElement("span");
+  msg_dot.className = "messages__dot";
+  typing_msg.appendChild(msg_dot);
+  typing_msg.appendChild(msg_dot.cloneNode(true));
+  typing_msg.appendChild(msg_dot.cloneNode(true));
+  history_element.insertBefore(typing_msg, history_element.firstChild);
+
   const data = new URLSearchParams();
   for (const pair of new FormData(form)) {
     data.append(pair[0], pair[1]);
@@ -86,6 +95,7 @@ function handleForm(event) {
   })
     .then((r) => r.json())
     .then((data) => {
+      history_element.removeChild(typing_msg);
       let bot_msg_element = document.createElement("div");
       bot_msg_element.className = "chatbox2";
       bot_msg_element.append(data["answer"]);
@@ -95,6 +105,7 @@ function handleForm(event) {
       user_input.value = "";
     })
     .catch(function (err) {
+      history_element.removeChild(typing_msg);
       let bot_msg_element = document.createElement("div");
       bot_msg_element.className = "chatbox2";
       bot_msg_element.append(
