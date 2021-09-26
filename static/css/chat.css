@@ -1,0 +1,60 @@
+
+
+/* CHATBOX
+=============== */
+
+.chatbox {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 5rem;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+    
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: inherit;
+    top: 0;
+    background: #5a8fe4;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: inherit;
+    bottom: 0;
+}
+
+
