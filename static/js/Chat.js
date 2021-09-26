@@ -88,7 +88,7 @@ function handleForm(event) {
   // 5 second timeout:
   const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-  fetch("https://gcp-chatbot.herokuapp.com/chat", {
+  fetch("https://gcp-chatbot.herokuapp.com/chatv2", {
     method: "POST",
     body: data,
     signal: controller.signal,
