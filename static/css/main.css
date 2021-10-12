@@ -194,6 +194,7 @@ ul {
   background-color: #e8e9eb;
   overflow: hidden;
   transition: transform 0.5s ease;
+  margin-bottom: 30px;
 }
 .card:hover {
   background-color: #c8cdd6;

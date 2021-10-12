@@ -69,6 +69,8 @@
 
 #user_input {
   padding-right: 75px;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 #user_input:focus {
@@ -77,4 +79,6 @@
 
 #snd_btn {
   z-index: 2;
+  border: none !important;
+  box-shadow: none !important;
 }
